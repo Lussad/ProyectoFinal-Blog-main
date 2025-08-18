@@ -8,7 +8,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR_STR, 'media')
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['inforgrupo4.pythonanywhere.com']
 
 SECRET_KEY = ''
 
