@@ -1,3 +1,14 @@
+/* ===== PALETA NUEVA (variables) ===== */
+:root{
+  --c-primary:#122624;   /* verde oscuro (principal) */
+  --c-secondary:#277365; /* esmeralda (secundario) */
+  --c-accent:#41A693;    /* turquesa (acento) */
+  --c-dark:#194039;      /* verde azulado (oscuro) */
+  --c-light:#F2F2F2;     /* claro */
+  --c-text:#122624;      /* texto por defecto */
+}
+
+
 .form-list-item label,
 .form-list-item input,
 .form-list-item select,
@@ -315,11 +326,12 @@
 }
 
 .crear-articulo-container .btn-primary {
-  background: var(--c-secondary, #277365);
-  color: #fff;
+  background: var(--c-light) !important;
+  color: var(--c-secondary) !important;
 }
 .crear-articulo-container .btn-primary:hover {
-  background: var(--c-primary, #41A693);
+  background: var(--c-secondary) !important;
+  color: var(--c-light) !important;
 }
 .crear-articulo-container .btn-secondary {
   background: #6c757d;
@@ -670,6 +682,30 @@ body {
 
 
 /* Contenedor de artículos */
+
+.boton-crear-articulo-list{
+  background-color: var(--c-light);
+  color: var(--c-secondary);
+  border-radius: 5px;
+  border: solid;
+  font-weight: bolder;
+  border-color: var(--c-secondary);
+  text-decoration: none;
+}
+
+.boton-crear-articulo-list:hover {
+  background-color: var(--c-secondary);
+  color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: solid;
+  border-color: var(--c-secondary);
+  text-decoration: none;
+}
+
+
+
+
 .posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -733,7 +769,7 @@ body {
 }
 
 .posts article .actions .button {
-  background-color: #007bff;
+  background-color: var(--c-secondary);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -889,6 +925,26 @@ body {
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
+
+/* Resumen del artículo */
+.resumen-container {
+  background-color: #f5f5f5;
+  border-left: 4px solid var(--c-accent);
+  border-right: 4px solid var(--c-accent);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.articulo-resumen {
+  font-size: 0.9rem;
+  color: black;
+  display: block;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
 
 .volver-link {
     display: inline-block;
@@ -1139,7 +1195,7 @@ body {
 }
 
 .lista-comentarios li {
-    background-color: white;
+    background-color: var(--c-light);
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -1172,22 +1228,23 @@ body {
 }
 
 .boton-eliminar {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 0.3em 0.6em;  /* Usando em para mejor escalado */
+    background-color: var(--c-light);
+    color: red !important;
+    padding: 0.3em 0.6em; 
     border-radius: 4px;
+    border-color: red;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    font-size: 0.75em;  /* Tamaño relativo al contenedor */
+    font-size: 0.75em;  
     text-decoration: none;
     display: inline-block;
 }
 
 .boton-eliminar:hover {
-    background-color: var(--c-secondary);
+    background-color: red !important;
+    color: var(--c-light) !important;
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -1202,8 +1259,8 @@ body {
     color: #333;
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 100%;           /* Limita el ancho máximo al contenedor padre */
-    word-break: break-word;    /* Rompe palabras largas si es necesario */
+    max-width: 100%;          
+    word-break: break-word;    
 }
 
 .lista-comentarios li small {
@@ -1765,7 +1822,7 @@ body {
     color: #023047;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid #007bff;
+    border-bottom: 3px solid var(--c-accent);
     padding-bottom: 0.5rem;
 }
 
@@ -1918,29 +1975,14 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-/* ===== PALETA NUEVA (variables) ===== */
-:root{
-  --c-primary:#122624;   /* verde oscuro (principal) */
-  --c-secondary:#277365; /* esmeralda (secundario) */
-  --c-accent:#41A693;    /* turquesa (acento) */
-  --c-dark:#194039;      /* verde azulado (oscuro) */
-  --c-light:#F2F2F2;     /* claro */
-  --c-text:#122624;      /* texto por defecto */
-}
-
 /* ===== BASE ===== */
 body{ background: var(--c-light) !important; color: var(--c-text) !important; }
 h1,h2,h3,h4,h5{ color: var(--c-text) !important; }
-a{ color: var(--c-secondary) !important; }
-a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
+a{ color: var(--c-secondary) !important; 
+border-radius: 3px;
+border: var(--c-secondary);
+}
+a:hover{ color: var(--c-accent) !important; text-decoration:none; }
 
 /* Contenedores blancos y borde sutil */
 #wrapper,.detalle-articulo-container,.area-comentarios,.posts article,.features article{
@@ -1984,17 +2026,16 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
 }
 
 /* ===== BOTONES Y LINKS DE ACCIÓN ===== */
-/* Reemplaza los azules (#007bff) y el verde viejo en todo el sitio */
 .btn, button, a.button,
 .area-comentarios button,
-.boton-ordenar, .boton-editar, .boton-eliminar {
+.boton-ordenar, .boton-editar{
   background: var(--c-secondary) !important;
   color:#fff !important;
   border:none !important;
 }
 .btn:hover, button:hover, a.button:hover,
 .area-comentarios button:hover,
-.boton-ordenar:hover, .boton-editar:hover, .boton-eliminar:hover{
+.boton-ordenar:hover, .boton-editar:hover{
   background: var(--c-primary) !important;
 }
 
@@ -2072,21 +2113,35 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
 
 
 
-/* Header: columna a la izquierda + colores con contraste */
+/* Header: imagen izquierda, texto centrado, iconos derecha */
 #header{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between;
   background: linear-gradient(180deg, var(--c-dark), var(--c-primary));
   padding: 1.1rem 1.6rem;
   border-bottom: 4px solid var(--c-accent);
   border-radius: 10px;
 }
 
+/* Contenedor del logo imagen a la izquierda */
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo-image {
+  height: 80px;
+  object-fit: contain;
+}
+
 #header .brand{
   display:flex;
-  flex-direction: column;          /* ⬅️ Informatorio arriba, TechVisión abajo */
-  align-items:flex-start;
+  flex-direction: column;
+  align-items:center;
+  text-align: center;
   line-height: 1.1;
   gap: .25rem;
+  flex: 1;
 }
 
 /* Informatorio 2025 chico y en acento */
@@ -2102,7 +2157,7 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
   opacity: .95;
 }
 
-/* TechVisión grande y claro (alto contraste) */
+/* TECChaco grande y claro (alto contraste) */
 #header .logo{
   display:block;
   font-family: 'Playfair Display', Georgia, serif;
@@ -2125,8 +2180,28 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
 
 /* Responsive */
 @media (max-width: 700px){
-  #header{ flex-wrap:wrap; gap:.6rem; }
-  #header .icons{ width:100%; justify-content:flex-start; }
+  #header{ 
+    flex-wrap:wrap; 
+    gap:.6rem; 
+    text-align: center;
+  }
+  
+  .logo-container {
+    order: 1;
+    width: 100%;
+    text-align: center;
+  }
+  
+  #header .brand {
+    order: 2;
+    width: 100%;
+  }
+  
+  #header .icons{ 
+    order: 3;
+    width:100%; 
+    justify-content:center; 
+  }
 }
 
 
@@ -2146,7 +2221,8 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
 }
 
 #header .logo{
-  color: #ffffff !important;              /* color de "TechVisión" */
+  color: #ffffff !important;              /* color de "TECChaco" */
+  text-decoration: none;
 }
 
 /* Iconos (Font Awesome toma el color del <a>) */
@@ -2162,7 +2238,7 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
   padding: 1.8rem 2.2rem;      /* ↑ aumenta alto del header */
 }
 #header .logo{
-  font-size: 2.4rem;           /* tamaño "TechVisión" */
+  font-size: 2.4rem;           /* tamaño "TECChaco" */
   line-height: 1.05;
 }
 #header .brand-tag{
@@ -2469,6 +2545,7 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
 /* formulario */
 .contact-fields{ display:grid; gap:.6rem; }
 .contact-input{
+  resize: none;
   width:100%;
   padding:.8rem .9rem;
   border:2px solid #e6efea;
@@ -2483,6 +2560,7 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
   box-shadow: 0 0 0 3px rgba(65,166,147,.20);
 }
 .contact-submit{
+  margin-top: 10px;
   background:#277365;
   color:#fff;
   border:none;
@@ -2846,3 +2924,6 @@ a:hover{ color: var(--c-accent) !important; text-decoration: underline; }
 @media (max-width:640px){
   .pwd-edit{ padding:1rem; }
 }
+
+
+

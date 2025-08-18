@@ -8,11 +8,6 @@
   <p>¿Tenés una consulta, sugerencia o querés colaborar? Escribinos por el formulario.</p>
 </section>
 
-{% if messages %}
-<ul class="contact-messages">
-  {% for m in messages %}<li class="msg {{ m.tags }}">{{ m }}</li>{% endfor %}
-</ul>
-{% endif %}
 
 <section class="contact-grid">
   <!-- 🟩 Equipo responsable (izquierda) -->

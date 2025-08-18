@@ -42,7 +42,8 @@ def Home(request):
 TEAM = [
     {"nombre": "Bravo Juan Pablo", "rol": "Desarrollo & Diseño", "email": "bravojuanpablo153@gmail.com"},
     {"nombre": "César Lautaro Obregón", "rol": "Desarrollo & Diseño"},
-    {"nombre": "Massad Lucas", "rol": "Desarrollo & Diseño"},
+    {"nombre": "Massad Lucas Yael", "rol": "Desarrollo & Diseño", "email": "massadlucas@gmail.com"},
+    {"nombre": "Lazarczuk Carlos Agustin", "rol": "Desarrollo & Diseño"},
 ]
 
 

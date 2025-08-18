@@ -23,10 +23,11 @@
         <img src="{{ articulo.imagen.url }}" class="imagen-articulo" alt="{{ articulo.nombre }}">
       {% endif %}
 
-      <p class="descripcion-articulo">
-        <strong>Descripción:</strong><br>
-        {{ articulo.resumen }}
-      </p>
+      <div class="resumen-container">
+        <p class="articulo-resumen">
+          {{ articulo.resumen }}
+        </p>
+      </div>
 
        <p class="cuerpo-articulo">
       <br>

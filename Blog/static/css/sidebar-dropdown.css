@@ -1,5 +1,4 @@
 
-/* Dropdown personalizado para sidebar usando la paleta de la página */
 #sidebar .nav-item.dropdown .dropdown-menu {
   display: none;
   position: static;
