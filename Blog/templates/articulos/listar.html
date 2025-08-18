@@ -28,6 +28,11 @@
 
         <h3>{{ articulo.nombre }}</h3>
         <p>{{ articulo.resumen|truncatechars:180 }}</p>
+        <div class="article-metadata">
+          <span class="author">Por: {{ articulo.autor.username }}</span> | 
+          <span class="date">{{ articulo.fecha_publicacion|date:"d/m/Y" }}</span> | 
+          <span class="category">{{ articulo.categoria.nombre }}</span>
+        </div>
 
         <div class="actions">
           <a href="{% url 'articulos:path_detalle_articulo' articulo.pk %}" class="button">Ver más</a>

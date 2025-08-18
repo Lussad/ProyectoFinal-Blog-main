@@ -18,6 +18,12 @@
 
     <h1 class="titulo-articulo">{{ articulo.nombre }}</h1>
 
+    <div class="article-metadata detail-metadata">
+      <span class="author">Por: {{ articulo.autor.username }}</span> | 
+      <span class="date">Publicado el: {{ articulo.fecha_publicacion|date:"d/m/Y" }}</span> | 
+      <span class="category">Categoría: {{ articulo.categoria.nombre }}</span>
+    </div>
+
     <div class="contenido-articulo">
       {% if articulo.imagen %}
         <img src="{{ articulo.imagen.url }}" class="imagen-articulo" alt="{{ articulo.nombre }}">
