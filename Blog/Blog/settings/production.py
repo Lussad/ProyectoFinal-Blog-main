@@ -16,10 +16,10 @@ SECRET_KEY = ''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'carrito$carrito',  # formato: usuario$nombre_basedatos
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': 'carrito.mysql.pythonanywhere-services.com',
+        'NAME': 'inforgrupo4$infogrupo4', 
+        'USER': 'inforgrupo4',
+        'PASSWORD': 'Proyecto.Blog4',
+        'HOST': 'inforgrupo4.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
