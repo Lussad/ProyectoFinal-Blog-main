@@ -3,9 +3,6 @@
 import os
 import sys
 
-#administrador
-#blog123
-
 
 def main():
     """Run administrative tasks."""

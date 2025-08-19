@@ -6,7 +6,7 @@
 {% block contenido_cuerpo %}
 
   {# Barra de acciones del artículo #}
-  {% if user.is_authenticated %}
+  {% if user.es_moderador %}
   <div class="acciones-articulo">
     <a class="btn-primary" href="{% url 'articulos:path_editar_articulo' articulo.pk %}">Editar</a>
     <a class="btn-danger"  href="{% url 'articulos:path_eliminar_articulo' articulo.pk %}">Eliminar</a>
